@@ -1,0 +1,105 @@
+extends layout
+
+block head
+	script(src='/javascripts/main.js')
+	link(rel='stylesheet', href='/stylesheets/style.css')
+	script.
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-70976323-1', 'auto');
+		ga('send', 'pageview');
+block facebook
+	script.
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.5";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+block content
+	.container
+		.nav.navbar-primary
+			a(href="http://www.fitobe.com/zh-Hant/") 
+				img(src="/images/fitobe.png")
+			ul
+				li
+					a(href="http://www.fitobe.com/zh-Hant/") 首頁
+				li  
+					a(href="http://www.fitobe.com/zh-Hant/features.html") 特色
+				li
+					a(href="/") 圖書館
+				li
+					a(href="http://www.fitobe.com/zh-Hant/about.html") 關於
+				li  
+					a(href="http://www.fitobe.com/zh-Hant/contact.html") 聯絡我們
+				ul
+					li
+						a(href="https://www.facebook.com/FiToBe.Health/")
+							img(src="/images/facebook.svg")
+					li
+						a(href="http://itunes.apple.com/app/fitobe-health-management/id1066643070?ls=1&mt=8")
+							img(src="/images/appstore.svg")
+			
+			.dropdown
+				button(class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true")
+					span(class="glyphicon glyphicon-menu-hamburger" aria-hidden="true")
+				ul(class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1")
+					li
+						a(href="http://www.fitobe.com/zh-Hant/") 首頁
+					hr
+					li
+						a(href="http://www.fitobe.com/zh-Hant/features.html") 特色
+					hr
+					li
+						a(href="/") 圖書館
+					hr
+					li
+						a(href="http://www.fitobe.com/zh-Hant/about.html") 關於
+					hr
+					li
+						a(href="http://www.fitobe.com/zh-Hant/contact.html") 聯絡我們
+					hr
+					li
+						a(href="https://www.facebook.com/FiToBe.Health/")
+							img(src="/images/facebook.svg" height="40")
+					hr
+					li
+						a(href="http://itunes.apple.com/app/fitobe-health-management/id1066643070?ls=1&mt=8")
+							img(src="/images/appstore.svg" height="40")
+					hr
+		.view
+			.col-md-8.col-xs-12
+				.article-view
+					div(class="jumbotron" style='background-image: url(' + image + ');')
+						.article.header
+							h1= title
+				.article-view-content
+					.author
+						p(class="author-name")= author
+						div(class="fb-like" data-href= url data-layout="button_count" data-action="like" data-show-faces="true" data-share="true")
+						br
+						br
+					div(class="article content")!= content
+
+			.col-md-4.col-xs-12
+				.sidebar
+					.fb-page-plugin
+						div(class="fb-page" 
+			  			data-href="https://www.facebook.com/FiToBe.Health"
+			  			data-width="360" 
+			  			data-hide-cover="false"
+						data-show-facepile="true" 
+						data-show-posts="false"
+						data-adapt-container-width="true")
+					.hot-article
+						.hot
+							p 熱門文章推薦
+						ul(class = "article-list")
+							li #{list}
+
+			.footer.col-md-12.col-xs-12
+				.footer © 2016 FiToBe by Watics Global Corporation. All rights reserved.

@@ -1,0 +1,293 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+*{
+	font-family: 'Raleway', 'Noto Sans TC',sans-serif !important;
+
+}
+body{
+	background-color: #F2F2F2;
+}
+p{
+	margin:0;
+}
+
+.container{
+	background-color: white;
+	padding:0px !important;
+	
+}
+#content>.container>.view{
+	margin:0 auto;
+	height: auto;
+}
+.nav {
+	width:auto;
+	height:60px !important;
+	background-color: white;
+	padding:0 ;
+
+
+}
+.nav>a,.nav>a>li{
+	text-decoration:none;
+	color:#5D5D5D;
+	font-size: 10pt;
+	display:inline;
+}
+.nav>a>li{
+	position: relative;
+	bottom:5px;
+}
+
+.nav>ul>li>a{
+	text-decoration:none;
+	transition:color .35s linear;
+}
+.nav>ul>li>a:hover{
+	color: #F9B946;
+}
+.nav> a> img{
+	width: 180px;
+	position:relative;
+	transition:-webkit-filter .25s linear;
+
+}
+.nav> a> img:hover{
+    -webkit-filter: brightness(115%);
+}
+
+.nav > ul,.nav>ul>ul{
+	padding-left:0px;
+	line-height: 60px;
+	margin:0;
+	display:inline;
+	text-align: center;
+	float:right;
+}
+.nav > ul{
+	padding-left:120px !important;
+}
+.nav > ul,li{
+	display:inline;
+}
+.nav > ul > li{
+	font-size: 15pt;
+	padding:0 15px 0 15px;
+}
+.nav > ul > li > a {
+	color:#5D5D5D;
+	cursor: pointer;
+}
+.nav>ul>ul>li{
+	padding:0 15px 0 15px;
+}
+.nav>ul>ul>li>a>img{
+	height:35px;
+	transition: -webkit-filter .5s linear;
+}
+.nav>ul>ul>li>a>img:hover{
+	
+	-webkit-filter:brightness(150%);
+}
+.dropdown{
+	display:inline;
+	float:right;
+
+}
+.dropdown-menu{
+	width:100vw;
+	height:auto;
+	min-height:120vw;
+	margin:0 !important;
+	border:0 !important;
+	border-radius: 0 !important;
+	padding-top:15px;
+}
+#dropdownMenu1{
+	border:0 ;
+	background-color: transparent;
+	box-shadow: none;
+	padding: 15px 15px 10px 15px;
+
+}
+#dropdownMenu1>span{
+	font-family: 'Glyphicons Halflings'!important;
+	font-size: 30px;
+	color:#F9B946;
+}
+#dropdownMenu1>span:active{
+	color:#5D5D5D;
+}
+.dropdown>ul>li>a{
+	width:100%;
+	text-align: center;
+	font-size: 14pt;
+
+}
+.col-md-8,.col-xs-12{
+	padding:0 !important;
+}
+
+.article-view{
+	width:100%;
+	background-color: white;
+}
+.article-view > .jumbotron{
+	width:100%;
+	position: relative;
+	padding-top: 48.75%;
+	background-size: cover;
+	background-repeat:no-repeat;
+	border-radius: 0px !important;
+	margin-bottom:0px;
+}
+.article.header{
+	position: absolute; 
+	left:0;
+	bottom: 0;
+	width:100%;
+	height: auto;
+	background-color: black;
+	background-color:rgba(0,0,0,0.35)
+}
+.article.header>h1{
+	margin:0;
+	font-size:22pt;
+	text-align: center;
+	color:white;
+	line-height: 40px;
+}
+
+.article-view-content{
+	padding:0 15px 30px 15px;
+}
+.author{
+	font-size:20pt;
+	padding-top:15px;
+}
+.fb-like{
+	float:right;
+	bottom:5px;
+}
+.heart{
+	display:none !important;
+	float:right;
+	display:inline;
+}
+.heart >img,.heart >p,.heart >span {
+	padding:0 15px 0 15px;
+	height:25px;
+}
+.author p{
+	color:#5D5D5D;
+	font-size:16pt;
+	display:inline;
+}
+.article.content{
+	color:#5D5D5D;
+	height:auto;
+	font-size:130%;
+}
+
+
+.sidebar{
+	background-color: white;
+	padding:0 15px 0 15px;
+}
+
+
+.hot{
+	background-color: #69C1D3;
+	height:60px;
+}
+.hot > p{
+	color:white;
+	text-align: center;
+	font-size: 16pt;
+	line-height:60px;
+}
+.article-list{
+	padding:5px 0 5px 0;
+}
+.hot-list-div{
+	padding:5px 0 5px 0;
+	cursor:pointer;
+}
+.hot-list{
+	color:#5D5D5D;
+	display:block;
+	height:60px;
+	background-color: #F2F2F2;
+	line-height:60px;
+	text-align: center;
+	padding-top:20px;
+	text-decoration: none;
+}
+.hot-list:hover{
+	background-color:#F9B946;
+	transition:background-color .5s;
+	text-decoration: none;
+}
+.hot-list>h2{
+	font-size: 12pt;
+	margin:0;
+}
+
+.col-md-12.footer{
+	padding:0;
+}
+.footer{
+	height:40px;
+	background-color: #F9B946;
+	text-align: center;
+	color:white;
+	line-height: 40px;
+}
+
+@media screen and (max-width: 980px) {
+	.fb-page-plugin{
+		display: none;
+	}
+	.nav>a>img{
+		
+	}
+	.nav > ul{
+		display:none;
+	}
+	.sidebar{
+		background-color: white;
+		padding:0;
+	}
+	.footer{
+		font-size:10px;
+	}
+	.container{
+		margin:0 auto;
+	}
+}
+@media screen and (min-width: 991px) {
+	.dropdown{
+		display:none;
+	}
+}
+
+@media screen and (max-width :600px){
+	.article.header>h1{
+		font-size:18pt;
+		line-height: 40px;
+
+	}
+	.
+	.article.content img{
+		width:100% !important;
+		height:auto !important;
+	}
+	#dropdownMenu1{
+		display:inline;
+	}
+	.nav> a> img{
+		width: 140px;
+		top:7px;
+	}
+
+}

@@ -1,0 +1,10 @@
+extends layout
+
+block head	
+	script.
+		console.log(navigator.systemLanguage?navigator.systemLanguage:navigator.language);
+		if(navigator.systemLanguage?navigator.systemLanguage:navigator.language=="zh-TW"){
+			window.location.href="zh";
+		}else{
+			window.location.href="en";
+		}

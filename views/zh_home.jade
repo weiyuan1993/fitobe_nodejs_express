@@ -1,0 +1,73 @@
+extends layout
+
+block head
+	script(src="/javascripts/search.js")
+	link(rel='stylesheet', href='/stylesheets/search-style.css')
+	link(rel='stylesheet', href='/stylesheets/style.css')
+
+block content
+	.container
+		.navbar.navbar-primary.navbar-fixed-top
+			a(href="/") 
+				img(src="/images/fitobe.png")
+				li  圖書館
+
+			ul
+				li 
+					a(class="gethot") 熱門
+				li
+					a(href="http://www.fitobe.com/zh-Hant/") 首頁
+				li  
+					a(href="http://www.fitobe.com/zh-Hant/features.html") 特色
+				li
+					a(href="http://www.fitobe.com/zh-Hant/about.html") 關於
+				li  
+					a(href="http://www.fitobe.com/zh-Hant/contact.html") 聯絡我們
+				ul
+					li
+						a(href="https://www.facebook.com/FiToBe.Health/")
+							img(src="/images/facebook.svg" width="auto")
+					li
+						a(href="http://itunes.apple.com/app/fitobe-health-management/id1066643070?ls=1&mt=8")
+							img(src="/images/appstore.svg" width="auto")
+			.dropdown
+				button(class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true")
+					span(class="glyphicon glyphicon-menu-hamburger" aria-hidden="true")
+				ul(class="dropdown-menu pull-right" aria-labelledby="dropdownMenu1")
+					li 
+						a(class="gethot") 熱門文章
+					hr
+					li
+						a(href="http://www.fitobe.com/zh-Hant/") 首頁
+					hr
+					li
+						a(href="http://www.fitobe.com/zh-Hant/features.html") 特色
+					hr
+					li
+						a(href="http://www.fitobe.com/zh-Hant/about.html") 關於
+					hr
+					li
+						a(href="http://www.fitobe.com/zh-Hant/contact.html") 聯絡我們
+					hr
+					li
+						a(href="https://www.facebook.com/FiToBe.Health/")
+							img(src="/images/facebook.svg" height="40")
+					hr
+					li
+						a(href="http://itunes.apple.com/app/fitobe-health-management/id1066643070?ls=1&mt=8")
+							img(src="/images/appstore.svg" height="40")
+					hr
+		
+		.col-md-12.col-xs-12
+			.search-block
+				select(name="category" id="category-select" class="btn  dropdown-toggle")
+					option(value="EATFIT") EatFiT
+					option(value="MOFIT") MoFiT
+					option(value="LIFIT") LiFiT
+				input(type="text" name="search" id="search-input" class="form-control")
+				button(id="search" class="btn btn-primary") 搜尋
+				p
+				ul(class="pagination")
+			.search-result 
+			.bottomnext
+				ul(class="pagination")
