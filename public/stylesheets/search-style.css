@@ -169,7 +169,7 @@ body{
 
 
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 990.5px) {
 
 	.result-img{
 		width:98.5%;
@@ -219,8 +219,11 @@ body{
 		bottom:0px;
 	}
 }
-@media screen and (max-width: 991px) {
+@media screen and (min-width: 991px) {
+
 	.navbar > ul{
-		display:none;
+		margin-left:0 !important; 
 	}
-}	
+
+
+}
