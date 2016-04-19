@@ -65,7 +65,8 @@ p{
 	float:right;
 }
 .nav > ul{
-	padding-left:120px !important;
+
+	float:right;
 }
 .nav > ul,li{
 	display:inline;
@@ -92,7 +93,9 @@ p{
 .dropdown{
 	display:inline;
 	float:right;
-
+}
+.dropdown>ul>hr{
+	margin:10px;
 }
 .dropdown-menu{
 	width:100vw;
@@ -244,7 +247,7 @@ p{
 	line-height: 40px;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1000.5px) {
 	.fb-page-plugin{
 		display: none;
 	}
@@ -265,7 +268,7 @@ p{
 		margin:0 auto;
 	}
 }
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 1000px) {
 	.dropdown{
 		display:none;
 	}
@@ -277,7 +280,6 @@ p{
 		line-height: 40px;
 
 	}
-	.
 	.article.content img{
 		width:100% !important;
 		height:auto !important;
@@ -290,4 +292,13 @@ p{
 		top:7px;
 	}
 
+}
+
+@media screen and (max-height:550px){
+	.dropdown>ul>hr{
+		margin:2.5px !important;
+	}
+	.dropdown-menu{
+		padding-top:5px !important;
+	}
 }

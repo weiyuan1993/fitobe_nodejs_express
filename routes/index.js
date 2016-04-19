@@ -52,10 +52,10 @@ router.get('/en/article', function(req, res, next) {
 	});   
 });
 router.get('/zh', function(req, res, next) {
-	res.render('zh_home',{title:"FiToBe 圖書館", image:"/images/fitobe.png"});
+	res.render('zh_home',{title:"FiToBe 圖書館",url:"http://blog.fitobe.com/zh"});
 });
 router.get('/en', function(req, res, next) {
-	res.render('en_home',{title:"FiToBe Library", image:"/images/fitobe.png"});
+	res.render('en_home',{title:"FiToBe Library",url:"http://blog.fitobe.com/en"});
 });
 router.get('/', function(req, res, next) {
 	res.render('home',{title:"FiToBe"});
