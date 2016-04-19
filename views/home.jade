@@ -2,8 +2,9 @@ extends layout
 
 block head	
 	script.
-		console.log(navigator.systemLanguage?navigator.systemLanguage:navigator.language);
-		if(navigator.systemLanguage?navigator.systemLanguage:navigator.language=="zh-TW"){
+		var userLang = navigator.language || navigator.userLanguage; 
+		console.log(userLang);
+		if(userLang.startsWith("zh")){
 			window.location.href="zh";
 		}else{
 			window.location.href="en";
