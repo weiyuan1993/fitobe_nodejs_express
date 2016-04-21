@@ -27,7 +27,8 @@ app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  var err = new Error("Not Found");
+  res.send("<h1>404 Not Found</h1><a href='/'>Go to blog.fitobe.com</a>");
   err.status = 404;
   next(err);
 });
