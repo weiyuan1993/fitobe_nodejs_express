@@ -23,7 +23,7 @@ $(document).ready(function(){
 				}.bind(this)
 			});	
 	}	
-	loadHotArticle();
+	//loadHotArticle();
 });
 
 

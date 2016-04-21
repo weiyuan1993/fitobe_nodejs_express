@@ -14,19 +14,31 @@ router.get('/zh/article', function(req, res, next) {
 		/* b: 傳回的資料內容 */
 		if(!e){
 			var jsonObject = JSON.parse(b);
-			return res.render('zh_index', 
-			{ 
-				title: jsonObject.article.title ,
-				image:jsonObject.article.coverPhoto,
-				author:jsonObject.article.author,
-				content:jsonObject.article.content,
-				url:"http://blog.fitobe.com/zh/article?id="+req.query.id
-			});
+			request({
+				url: "https://api.fitobe.com/fitobe/api/article/share/list",
+				method: "GET",
+				headers:{'Application_key':'13524932','lang':'zh'}
+				}, function(e,r,b) { /* Callback 函式 */
+				/* e: 錯誤代碼 */
+				/* b: 傳回的資料內容 */
+				if(!e){
+					var jsonObject2 = JSON.parse(b);
+					var article_list = jsonObject2.articleList.articles;
+					return res.render('zh_index', 
+					{ 
+						title: jsonObject.article.title ,
+						image:jsonObject.article.coverPhoto,
+						author:jsonObject.article.author,
+						content:jsonObject.article.content,
+						url:"http://blog.fitobe.com/zh/article?id="+req.query.id,
+						article_list:article_list
+					});
+				}
+				
+			}); 
 		}
 		
 	}); 
-
-
 });
 /* GET en page. */
 router.get('/en/article', function(req, res, next) {
@@ -40,14 +52,28 @@ router.get('/en/article', function(req, res, next) {
 		/* b: 傳回的資料內容 */
 		if(!e){
 			var jsonObject = JSON.parse(b);
-			res.render('en_index', 
-			{ 
-				title: jsonObject.article.title ,
-				image:jsonObject.article.coverPhoto,
-				author:jsonObject.article.author,
-				content:jsonObject.article.content,
-				url:"http://blog.fitobe.com/en/article?id="+req.query.id
-			});
+			request({
+				url: "https://api.fitobe.com/fitobe/api/article/share/list",
+				method: "GET",
+				headers:{'Application_key':'13524932','lang':'en'}
+				}, function(e,r,b) { /* Callback 函式 */
+				/* e: 錯誤代碼 */
+				/* b: 傳回的資料內容 */
+				if(!e){
+					var jsonObject2 = JSON.parse(b);
+					var article_list = jsonObject2.articleList.articles;
+					return res.render('en_index', 
+					{ 
+						title: jsonObject.article.title ,
+						image:jsonObject.article.coverPhoto,
+						author:jsonObject.article.author,
+						content:jsonObject.article.content,
+						url:"http://blog.fitobe.com/en/article?id="+req.query.id,
+						article_list:article_list
+					});
+				}
+				
+			}); 
 		}
 	});   
 });

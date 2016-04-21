@@ -3,7 +3,6 @@ extends layout
 block head
 	link(rel="stylesheet" href="/stylesheets/fakeLoader.css")
 	script(src='/javascripts/fakeLoader.min.js')
-	script(src='/javascripts/main.js')
 	link(rel='stylesheet', href='/stylesheets/style.css')
 
 	script.
@@ -105,6 +104,10 @@ block content
 						.hot
 							p 熱門文章推薦
 						ul(class = "article-list")
+							each val in article_list
+								div(class='hot-list-div')
+									a(class='hot-list' href="article?id="+val.articleID)
+										h2= val.title
 
 			.footer.col-md-12.col-xs-12
 				.footer © 2016 FiToBe by Watics Global Corporation. All rights reserved.
