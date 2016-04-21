@@ -10,13 +10,15 @@ html
 		meta(property="og:image" content= image)
 		meta(property="og:url" content= url)
 		script(src='/javascripts/jquery.min.js')
-		link(rel="stylesheet" href="/stylesheets/bootstrap.min.css")
-		link(rel="stylesheet" href="/stylesheets/bootstrap-theme.min.css")
+
 		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous")
 		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js")
 		block head
 	
 	body
+		block fakeLoader
 		block content
+
 	block facebook
-	
+	block loading
+		

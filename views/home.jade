@@ -1,11 +1,22 @@
-extends layout
+doctype html
+html
+	head
+		title FiToBe 圖書館|FiToBe Library
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+		link(href="/images/favicon.png" rel="shortcut icon" type="image/jpeg")
+		meta(charset="utf-8")
+		meta(property="og:title" content= "FiToBe 圖書館|FiToBe Library")
+		meta(property="og:type" content= "website")
+		meta(property="og:image" content= image)
+		meta(property="og:url" content= "http://blog.fitobe.com")
+		script.
+			var userLang = navigator.language || navigator.userLanguage; 
+			console.log(userLang);
+			if(userLang.startsWith("zh")){
+				window.location.href="zh";
+			}else{
+				window.location.href="en";
+			}
+	body
 
-block head	
-	script.
-		var userLang = navigator.language || navigator.userLanguage; 
-		console.log(userLang);
-		if(userLang.startsWith("zh")){
-			window.location.href="zh";
-		}else{
-			window.location.href="en";
-		}
+	

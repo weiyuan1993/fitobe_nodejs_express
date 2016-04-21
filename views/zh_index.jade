@@ -1,8 +1,11 @@
 extends layout
 
 block head
+	link(rel="stylesheet" href="/stylesheets/fakeLoader.css")
+	script(src='/javascripts/fakeLoader.min.js')
 	script(src='/javascripts/main.js')
 	link(rel='stylesheet', href='/stylesheets/style.css')
+
 	script.
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -11,6 +14,7 @@ block head
 
 		ga('create', 'UA-70976323-1', 'auto');
 		ga('send', 'pageview');
+
 block facebook
 	script.
 		(function(d, s, id) {
@@ -20,6 +24,8 @@ block facebook
 			js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.5";
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
+
+
 block content
 	.container
 		.nav.navbar-primary
@@ -99,7 +105,18 @@ block content
 						.hot
 							p 熱門文章推薦
 						ul(class = "article-list")
-							li #{list}
 
 			.footer.col-md-12.col-xs-12
 				.footer © 2016 FiToBe by Watics Global Corporation. All rights reserved.
+block fakeLoader
+	div(id="fakeLoader")
+block loading
+	script.
+		$("#fakeLoader").fakeLoader({
+			timeToHide:9999,
+			spinner:"spinner3",
+			bgColor:"#F2F2F2", 
+		});
+		$(window).load(function(){
+			$('#fakeLoader').fadeOut();
+		})

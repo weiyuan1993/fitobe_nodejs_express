@@ -5,6 +5,7 @@ $(document).ready(function(){
 	var article_lang = split_lang[3];
 	console.log(article_lang);
 	var al=$(".article-list");
+
 	function loadHotArticle(){
 		$.ajax({
 				type:"GET",
@@ -18,14 +19,11 @@ $(document).ready(function(){
 					},this);
 				}.bind(this),
 				error:function(){
-					alert("receive article list error!");
+					console.log("receive article list error!");
 				}.bind(this)
 			});	
 	}	
 	loadHotArticle();
-
-	
-
 });
 
 

@@ -26,12 +26,12 @@ function search(search_content,category){
 					if(articles.language=='zh-Hant'){
 
 						result.append
-							("<div class='result'><div class='result-img' style='background-image:url("+articles.coverPhoto+");'><div class='result-title'><a href="+'zh/article?id='+articles.articleID+">"+articles.title+"</a></div>"+
-							"</div></div>");
+							("<a href="+'zh/article?id='+articles.articleID+"><div class='result-img' style='background-image:url("+articles.coverPhoto+");'><div class='result-title'>"+articles.title+"</div>"+
+							"</div></a>");
 					}else{
 						result.append
-							("<div class='result'><div class='result-img' style='background-image:url("+articles.coverPhoto+");'><div class='result-title'><a href="+'en/article?id='+articles.articleID+">"+articles.title+"</a></div>"+
-							"</div></div>");
+							("<a href="+'en/article?id='+articles.articleID+"><div class='result-img' style='background-image:url("+articles.coverPhoto+");'><div class='result-title'>"+articles.title+"</div>"+
+							"</div></a>");
 					}
 						
 				},this);
@@ -68,13 +68,14 @@ function clickChangePage(pageNumber){
 				articles.map(function(articles){
 
 					if(articles.language=='zh-Hant'){
+
 						result.append
-							("<div class='result'><div class='result-img' style='background-image:url("+articles.coverPhoto+");'><div class='result-title'><a href="+'zh/article?id='+articles.articleID+">"+articles.title+"</a></div>"+
-							"</div></div>");
+							("<a href="+'zh/article?id='+articles.articleID+"><div class='result-img' style='background-image:url("+articles.coverPhoto+");'><div class='result-title'>"+articles.title+"</div>"+
+							"</div></a>");
 					}else{
-							result.append
-							("<div class='result'><div class='result-img' style='background-image:url("+articles.coverPhoto+");'><div class='result-title'><a href="+'en/article?id='+articles.articleID+">"+articles.title+"</a></div>"+
-							"</div></div>");
+						result.append
+							("<a href="+'en/article?id='+articles.articleID+"><div class='result-img' style='background-image:url("+articles.coverPhoto+");'><div class='result-title'>"+articles.title+"</div>"+
+							"</div></a>");
 					}
 
 				},this);
@@ -109,8 +110,8 @@ function loadHotArticle(){
 				var articles = data.articleList.articles;
 				articles.map(function(articles){
 					result.append
-							("<div class='result'><div class='result-img' style='background-image:url("+articles.coverPhoto+");'><div class='result-title'><a href="+'zh/article?id='+articles.articleID+">"+articles.title+"</a></div>"+
-							"</div></div>");
+							("<a href="+'zh/article?id='+articles.articleID+"><div class='result-img' style='background-image:url("+articles.coverPhoto+");'><div class='result-title'>"+articles.title+"</div>"+
+							"</div></a>");
 					$(".search-block>p").text("");
 				},this);
 			}.bind(this),

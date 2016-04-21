@@ -1,8 +1,11 @@
 extends layout
 
 block head
+	link(rel="stylesheet" href="/stylesheets/fakeLoader.css")
+	script(src='/javascripts/fakeLoader.min.js')
 	script(src='/javascripts/main.js')
 	link(rel='stylesheet', href='/stylesheets/style.css')
+
 	script.
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -26,7 +29,7 @@ block facebook
 block content
 	.container
 		.nav.navbar-primary
-			a(href="http://www.fitobe.com/zh-Hant/") 
+			a(href="http://www.fitobe.com/en/") 
 				img(src="/images/fitobe.png")
 			ul
 				li
@@ -105,3 +108,15 @@ block content
 
 			.footer.col-md-12.col-xs-12
 				.footer © 2016 FiToBe by Watics Global Corporation. All rights reserved.
+block fakeLoader
+	div(id="fakeLoader")
+block loading
+	script.
+		$("#fakeLoader").fakeLoader({
+			timeToHide:9999,
+			spinner:"spinner3",
+			bgColor:"#F2F2F2", 
+		});
+		$(window).load(function(){
+			$('#fakeLoader').fadeOut();
+		})
