@@ -247,7 +247,7 @@ p{
 	line-height: 40px;
 }
 
-@media screen and (max-width: 1000.5px) {
+@media screen and (max-width: 999.5px) {
 	.fb-page-plugin{
 		display: none;
 	}
@@ -291,14 +291,11 @@ p{
 		width: 140px;
 		top:7px;
 	}
-
-}
-
-@media screen and (max-height:550px){
 	.dropdown>ul>hr{
 		margin:2.5px !important;
 	}
 	.dropdown-menu{
 		padding-top:5px !important;
 	}
+
 }
