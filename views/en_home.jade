@@ -6,6 +6,7 @@ block head
 	link(rel='stylesheet', href='/stylesheets/style.css')
 	meta(property="og:description" content="FiToBe Library，you can search EatFiT、MotFiT、LiFiT articles here.")
 	meta(property="og:image" content="https://1584a0390d543794da81115c3efdc6963469ad10.googledrive.com/host/0BxcaMpkxnZGCQWxlZHJiUnRTQm8")
+	meta(name="description" content="FiToBe Library，you can search EatFiT、MotFiT、LiFiT articles here.")
 block content
 	.container
 		.navbar.navbar-primary.navbar-fixed-top
@@ -61,12 +62,13 @@ block content
 		
 		.col-md-12.col-xs-12
 			.search-block
-				select(name="category" id="category-select" class="btn dropdown-toggle")
+				select(name="category" id="category-select" class="btn btn-info dropdown-toggle")
 					option(value="EATFIT") EatFiT
 					option(value="MOFIT") MoFiT
 					option(value="LIFIT") LiFiT
 				input(type="text" name="search" id="search-input" class="form-control")
-				button(id="search" class="btn btn-primary") Search
+				button(id="search" class="btn btn-primary")
+					span(class="glyphicon glyphicon-search" aria-hidden="true" style="font-family: 'Glyphicons Halflings' !important; color:white;")
 				p
 				ul(class="pagination")
 			.search-result 
